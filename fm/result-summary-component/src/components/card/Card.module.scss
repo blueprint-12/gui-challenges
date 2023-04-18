@@ -1,0 +1,20 @@
+h4,
+p {
+  color: white;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #808080;
+  padding: 20px;
+}
+
+.card-score {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-score__explanation {
+  background-color: gray;
+}
