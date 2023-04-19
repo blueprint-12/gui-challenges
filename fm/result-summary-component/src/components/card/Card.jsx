@@ -4,13 +4,15 @@ export default function Card() {
   return (
     <div className={styles["card"]}>
       <h4>Your Result</h4>
-      <div className={styles["card-score"]}>
-        <span className="">76</span>
-        <span className="">of 100</span>
+      <div className={styles["score-container"]}>
+        <div className={styles["score-contents"]}>
+          <span id="main-score">76</span>
+          <span id="sub-score">of 100</span>
+        </div>
       </div>
-      <div>
+      <div className={styles["explanation-container"]}>
         <h3>Great</h3>
-        <p className={styles["card-score__explanation"]}>
+        <p className={styles["explanation-contents"]}>
           You scored higher than 65% of the people who have taken these tests
         </p>
       </div>

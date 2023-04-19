@@ -2,16 +2,30 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  font-size: 18px;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
+  line-height: 1.2;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --main-blur-color: rgba(255, 255, 255, 0.3);
+
+  --primary-light-red: hsl(0, 100%, 67%);
+  --primary-orange: hsl(39, 100%, 56%);
+  --primary-blue: hsl(234, 85%, 45%);
+
+  --bg-gradient-light-blue: hsl(252, 100%, 67%);
+  --bg-gradient-deep-blue: hsl(241, 81%, 54%);
+
+  --score-gradient-light-blue: hsla(256, 72%, 46%, 1);
+  --score-gradient-deep-blue: hsla(241, 72%, 46%, 0);
 }
 
 a {
