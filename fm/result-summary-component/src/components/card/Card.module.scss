@@ -5,20 +5,23 @@ p {
   color: white;
   font-weight: 400;
 }
+@mixin card-layout {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  border-radius: 15px;
+}
 
 $half-blur: rgba(255, 255, 255, 0.5);
 
 .card {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include card-layout;
   background: linear-gradient(
     var(--bg-gradient-light-blue),
     var(--bg-gradient-deep-blue)
   );
-  padding: 20px;
-  border-radius: 15px;
 
   h4 {
     font-weight: 400;
@@ -73,4 +76,37 @@ $half-blur: rgba(255, 255, 255, 0.5);
   text-align: center;
   font-size: 0.8rem;
   color: $half-blur;
+}
+
+// summary card CSS
+
+.summary-card {
+  @include card-layout;
+  box-shadow: 17px 20px 26px -11px rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 17px 20px 26px -11px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 17px 20px 26px -11px rgba(0, 0, 0, 0.26);
+}
+.summary-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#summary-title {
+  width: 100%;
+  text-align: start;
+  color: var(--dark-gray-blue);
+  margin-top: 10px;
+}
+
+.summary-btn-container {
+  margin-top: 20px;
+  width: 100%;
+  & > #continue-btn {
+    width: 100%;
+    color: white;
+    background-color: var(--dark-gray-blue);
+    border-radius: 15px;
+  }
 }
