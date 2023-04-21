@@ -1,3 +1,8 @@
+$red: hsl(0, 100%, 67%);
+$orange: hsl(39, 100%, 56%);
+$green: hsl(166, 100%, 37%);
+$blue: hsl(234, 85%, 45%);
+
 .item-container {
   display: flex;
   justify-content: space-between;
@@ -11,6 +16,19 @@
   display: flex;
   align-items: center;
   gap: 5px;
+
+  &.red {
+    color: $red;
+  }
+  &.orange {
+    color: $orange;
+  }
+  &.green {
+    color: $green;
+  }
+  &.blue {
+    color: $blue;
+  }
 }
 
 .item-score {

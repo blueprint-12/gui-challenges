@@ -34,6 +34,7 @@ export default function Card({ isSummary }) {
               score={item.score}
               icon={item.icon}
               bgColor={item.bgColor}
+              fontColor={item.fontColor}
             />
           ))}
         </div>

@@ -14,14 +14,16 @@ p {
   border-radius: 15px;
 }
 
+$main-purple-gradient: linear-gradient(
+  var(--bg-gradient-light-blue),
+  var(--bg-gradient-deep-blue)
+);
+
 $half-blur: rgba(255, 255, 255, 0.5);
 
 .card {
   @include card-layout;
-  background: linear-gradient(
-    var(--bg-gradient-light-blue),
-    var(--bg-gradient-deep-blue)
-  );
+  background: $main-purple-gradient;
 
   h4 {
     font-weight: 400;
@@ -108,5 +110,9 @@ $half-blur: rgba(255, 255, 255, 0.5);
     color: white;
     background-color: var(--dark-gray-blue);
     border-radius: 15px;
+
+    &:hover {
+      background: $main-purple-gradient;
+    }
   }
 }
