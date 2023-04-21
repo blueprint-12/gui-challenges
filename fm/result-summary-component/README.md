@@ -34,3 +34,7 @@
 - max-width 와 min-width 값 활용 제대로 하기
 - `SCSS도 조건부 스타일링이 가능하다! 대신 값을 바로 props처럼 css에 넣어줄 순 없고 className을 동적으로 넣어서 해당 css를 선택을 각각 작성해줘야 한다.`
   - 조건부로 css 클래스를 넣어주고 싶을 때, 문자열을 직접 조합하는 것보단 `classnames`라는 라이브러리를 사용하는 것이 훨씬 편하다.
+
+## 이슈
+
+[SCSS 모듈 + classname 라이브러리 관련 이슈](https://blueprint-12.tistory.com/368)
