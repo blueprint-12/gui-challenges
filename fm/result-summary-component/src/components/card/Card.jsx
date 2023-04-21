@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Card.module.scss";
-import ListItem from "../../elements/ListItem";
+import ListItem from "../list-item/ListItem";
 import list from "../../data.json";
 
 export default function Card({ isSummary }) {
