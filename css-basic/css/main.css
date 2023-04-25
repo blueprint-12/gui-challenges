@@ -1,0 +1,138 @@
+/* reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* page default */
+html,
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+}
+
+/* general classes */
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+.dark {
+  background: #333;
+  color: white;
+}
+
+/* specific */
+
+body {
+  flex-direction: column;
+  padding-bottom: 60px; /* IOS에서 사과 도구 모음이 나타나는 등 방해상황에 대해서 고려*/
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  flex-wrap: wrap; /*  요소의 범위가 넘어가면 하단으로 내려가게  */
+  align-items: center;
+  padding: 1rem, 0.5rem, 0.5rem;
+}
+
+.navbar__title {
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.navbar__navmenu {
+  width: 100%;
+  position: relative; /* absolute 포지션을 잡기위해 설정 */
+}
+
+.navbar__links-btn {
+  background-color: transparent;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1rem;
+  border: none;
+}
+
+.navbar__list {
+  text-align: right;
+  display: none;
+  position: fixed;
+  top: 70px;
+  left: 25px;
+  background-color: #333;
+  z-index: 1;
+}
+/* 모바일 디바이스에서는 마우스를 올려놓을 수 없기 떄문에 :focus-within을 사용한다.  */
+.navbar__navmenu:hover .naver__list,
+.navbar__navmenu:focus-within .navbar__list {
+  display: block;
+}
+
+.navber__list-item {
+  margin: 0.5rem;
+}
+
+.navber__list-item:last-child {
+  margin-right: 0;
+}
+.navbar__list-link {
+  color: white;
+}
+
+.main {
+  flex-wrap: wrap;
+  max-width: 1200px; /* 데스크탑 view 최대 넓이 조정 */
+  margin: auto; /*  여백 자동 지정 */
+}
+
+.post {
+  scroll-snap-margin-top: 90px; /*  for IOS */
+  scroll-margin-top: 90px;
+  width: 250px;
+  border: 1px solid #000;
+  border-radius: 25px;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 4px 4px 10px #333; /*  3번째 요소는 blur */
+}
+
+/* 아이패드 pro 기준 1024px로 가장 큰 태블릿임 (태블릿사이즈)  */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .post {
+    width: 200px;
+  }
+}
+
+.post__img {
+  display: block;
+  margin: 1rem auto;
+  border-radius: 25px;
+  width: 100%;
+  border: 1px solid #eee;
+}
+.post__img:hover {
+  border: none;
+  box-shadow: 4px 4px 10px #333;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  padding: 1rem 0.5rem 0.5rem;
+}
