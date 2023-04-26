@@ -9,7 +9,7 @@
 /* page default */
 html,
 body {
-  width: 100vw;
+  max-width: 100vw;
   min-height: 100vh;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 16px;
@@ -52,6 +52,10 @@ body {
   font-size: 1.5rem;
 }
 
+.navbar__down-arrow {
+  font-size: 0.75rem;
+}
+
 .navbar__navmenu {
   width: 100%;
   position: relative; /* absolute 포지션을 잡기위해 설정 */
@@ -75,7 +79,7 @@ body {
   z-index: 1;
 }
 /* 모바일 디바이스에서는 마우스를 올려놓을 수 없기 떄문에 :focus-within을 사용한다.  */
-.navbar__navmenu:hover .naver__list,
+.navbar__navmenu:hover .navbar__list,
 .navbar__navmenu:focus-within .navbar__list {
   display: block;
 }
@@ -84,9 +88,9 @@ body {
   margin: 0.5rem;
 }
 
-.navber__list-item:last-child {
+/* .navber__list-item:last-child {
   margin-right: 0;
-}
+} */
 .navbar__list-link {
   color: white;
 }
@@ -108,10 +112,43 @@ body {
   box-shadow: 4px 4px 10px #333; /*  3번째 요소는 blur */
 }
 
+/* 데스크탑 사이즈 */
+@media screen and (min-width: 1024px) {
+  .navbar__links-btn {
+    display: none;
+  }
+
+  .navbar__list {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    list-style-type: none;
+    justify-content: right;
+    z-index: 1;
+  }
+
+  .navber__list-item:last-child {
+    margin-right: 5px;
+  }
+  .navbar__navmenu {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  .navbar__navmenu:hover .navbar__list,
+  .navbar__navmenu:focus-within .navbar__list {
+    display: flex;
+  }
+}
 /* 아이패드 pro 기준 1024px로 가장 큰 태블릿임 (태블릿사이즈)  */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .post {
     width: 200px;
+  }
+  .navber__list-item:last-child {
+    margin-right: 0;
   }
 }
 
