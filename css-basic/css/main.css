@@ -44,12 +44,13 @@ body {
   height: 80px;
   flex-wrap: wrap; /*  요소의 범위가 넘어가면 하단으로 내려가게  */
   align-items: center;
-  padding: 1rem, 0.5rem, 0.5rem;
+  padding: 0.5rem;
 }
 
 .navbar__title {
   width: 100%;
   font-size: 1.5rem;
+  z-index: 2;
 }
 
 .navbar__down-arrow {
